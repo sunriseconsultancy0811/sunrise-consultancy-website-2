@@ -8,158 +8,76 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #f4f7fb;
-    color: #111;
-}
+body {margin:0;font-family:'Poppins',sans-serif;background:#f4f7fb;}
 
 /* HEADER */
 header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background: rgba(255,255,255,0.75);
-    backdrop-filter: blur(12px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 60px;
-    z-index: 1000;
+position:fixed;width:100%;top:0;
+background:rgba(255,255,255,0.8);
+backdrop-filter:blur(10px);
+display:flex;justify-content:space-between;align-items:center;
+padding:15px 60px;z-index:1000;
 }
 
-header img { height: 50px; }
+header img {height:50px;}
 
 nav a {
-    margin-left: 25px;
-    text-decoration: none;
-    color: #0a2540;
-    font-weight: 500;
+margin-left:25px;text-decoration:none;color:#0a2540;font-weight:500;
 }
 
 /* HERO */
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 150px 60px 100px;
+display:flex;align-items:center;justify-content:space-between;
+padding:150px 60px 100px;
 }
 
-.hero-text { max-width: 50%; }
+.hero-text {max-width:50%;}
 
-.hero h1 {
-    font-size: 54px;
-    line-height: 1.2;
-}
-
-.hero p {
-    font-size: 18px;
-    color: #555;
-    margin-top: 15px;
-}
+.hero h1 {font-size:48px;}
+.hero p {color:#555;margin-top:10px;}
 
 .btn {
-    display: inline-block;
-    background: linear-gradient(45deg,#ff7a00,#ffb347);
-    color: white;
-    padding: 14px 28px;
-    margin-top: 25px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    transform: translateY(-4px);
-}
-
-/* HERO IMAGE */
-.hero img {
-    width: 45%;
-    border-radius: 18px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+background:linear-gradient(45deg,#ff7a00,#ffb347);
+color:white;padding:12px 25px;border-radius:30px;
+text-decoration:none;margin-top:20px;display:inline-block;
 }
 
 /* SECTION */
-section {
-    padding: 100px 60px;
-}
+section {padding:90px 60px;}
 
-.section-title {
-    text-align: center;
-    font-size: 34px;
-    margin-bottom: 50px;
-}
+.title {text-align:center;margin-bottom:40px;font-size:32px;}
 
-/* CARDS */
-.grid {
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-}
+.grid {display:flex;gap:20px;flex-wrap:wrap;}
 
 .card {
-    flex: 1;
-    min-width: 260px;
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-12px);
+flex:1;min-width:250px;background:white;padding:25px;
+border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
 /* HIGHLIGHT */
 .highlight {
-    background: linear-gradient(135deg,#0a2540,#1c4b82);
-    color: white;
-    text-align: center;
-    padding: 120px 20px;
+background:#0a2540;color:white;text-align:center;padding:100px 20px;
 }
 
 /* JOBS */
 .job {
-    background: white;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 12px;
-    transition: 0.3s;
-}
-
-.job:hover {
-    transform: scale(1.03);
+background:white;padding:20px;margin:10px 0;border-radius:10px;
 }
 
 /* CTA */
 .cta {
-    background: linear-gradient(45deg,#ff7a00,#ffb347);
-    color: white;
-    text-align: center;
-    padding: 90px;
+background:#ff7a00;color:white;text-align:center;padding:70px;
 }
 
 /* FOOTER */
 footer {
-    background: #0a2540;
-    color: white;
-    text-align: center;
-    padding: 30px;
+background:#0a2540;color:white;text-align:center;padding:20px;
 }
 
 /* WHATSAPP */
 .whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: white;
-    padding: 16px;
-    border-radius: 50%;
+position:fixed;bottom:20px;right:20px;
+background:#25D366;color:white;padding:15px;border-radius:50%;
 }
 </style>
 </head>
@@ -167,76 +85,145 @@ footer {
 <body>
 
 <header>
-    <img src="logo.png">
-    <nav>
-        <a href="#">Home</a>
-        <a href="#services">Services</a>
-        <a href="#jobs">Jobs</a>
-    </nav>
+<img src="logo.png">
+<nav>
+<a href="#">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#industries">Industries</a>
+<a href="#jobs">Jobs</a>
+</nav>
 </header>
 
 <section class="hero">
-    <div class="hero-text">
-        <h1>Global Recruitment Solutions for Growing Businesses</h1>
-        <p>We help companies hire skilled professionals across India, UAE, UK, USA and global markets — efficiently and reliably.</p>
+<div class="hero-text">
+<h1>Bridging Talent with Opportunity Across Global Markets</h1>
+<p>We provide recruitment, training, and talent solutions to help businesses hire the right professionals and candidates build successful careers worldwide.</p>
 
-        <a href="https://forms.gle/okF6cmUNH5oLGbhs9" class="btn">Hire Talent</a>
-        <a href="https://www.linkedin.com/company/sunrise-consultancy-0811/" class="btn">LinkedIn</a>
-    </div>
+<a href="https://forms.gle/hDq8JJbJjZNZnZ7E9" class="btn">Hire Talent</a>
+<a href="https://forms.gle/hDq8JJbJjZNZnZ7E9" class="btn">Submit CV</a>
+</div>
 
-    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
+<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" width="45%">
+</section>
+
+<section id="about">
+<h2 class="title">About Us</h2>
+<p style="max-width:800px;margin:auto;text-align:center;">
+Sunrise Consultancy is a global recruitment and talent solutions firm dedicated to bridging the gap between skilled professionals and industry requirements.
+
+We provide customized hiring solutions to help organizations build strong teams while supporting candidates with the right career opportunities.
+
+Our focus is on quality, efficiency, and long-term partnerships across global markets.
+</p>
 </section>
 
 <section id="services">
-    <h2 class="section-title">Our Expertise</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>Global Recruitment</h3>
-            <p>End-to-end hiring solutions across international markets.</p>
-        </div>
-        <div class="card">
-            <h3>International Hiring</h3>
-            <p>Specialized recruitment for UAE, UK, USA, and global companies.</p>
-        </div>
-        <div class="card">
-            <h3>Executive Search</h3>
-            <p>Leadership and senior-level hiring solutions.</p>
-        </div>
-    </div>
+<h2 class="title">Our Services</h2>
+<div class="grid">
+
+<div class="card">
+<h3>Recruitment Services</h3>
+<p>End-to-end hiring solutions across industries.</p>
+</div>
+
+<div class="card">
+<h3>International Recruitment</h3>
+<p>Hiring for UAE, UK, USA and global markets.</p>
+</div>
+
+<div class="card">
+<h3>Executive Search</h3>
+<p>Leadership and senior-level hiring solutions.</p>
+</div>
+
+<div class="card">
+<h3>Corporate Training</h3>
+<p>Industry-focused training to make candidates job-ready.</p>
+</div>
+
+<div class="card">
+<h3>Placement Services</h3>
+<p>Connecting candidates with the right job opportunities.</p>
+</div>
+
+<div class="card">
+<h3>HR Solutions</h3>
+<p>Complete manpower and staffing solutions.</p>
+</div>
+
+</div>
 </section>
 
 <section class="highlight">
-    <h2>Connecting Talent Across Borders</h2>
-    <p>We help businesses access skilled professionals from India and global talent pools for international markets.</p>
+<h2>Connecting Talent Across Borders</h2>
+<p>We help businesses access skilled professionals from India and global talent pools.</p>
+</section>
+
+<section id="industries">
+<h2 class="title">Industries We Serve</h2>
+<div class="grid">
+<div class="card">Accounting & Finance</div>
+<div class="card">Engineering</div>
+<div class="card">IT & Software</div>
+<div class="card">Construction</div>
+<div class="card">Corporate & Management</div>
+<div class="card">KPO & BPO</div>
+</div>
+</section>
+
+<section>
+<h2 class="title">Training & Development</h2>
+<p style="max-width:800px;margin:auto;text-align:center;">
+We provide industry-oriented training programs to bridge the gap between academic knowledge and real-world job requirements, making candidates job-ready.
+</p>
+</section>
+
+<section>
+<h2 class="title">How We Work</h2>
+<p style="max-width:800px;margin:auto;text-align:center;">
+Understanding client requirements → Sourcing candidates → Screening & evaluation → Shortlisting → Final placement.
+</p>
+</section>
+
+<section>
+<h2 class="title">For Candidates</h2>
+<p style="max-width:800px;margin:auto;text-align:center;">
+We support candidates in finding the right opportunities aligned with their skills and career goals.
+</p>
+
+<h2 class="title">For Employers</h2>
+<p style="max-width:800px;margin:auto;text-align:center;">
+We help organizations build strong teams with reliable and skilled professionals.
+</p>
 </section>
 
 <section id="jobs">
-    <h2 class="section-title">Current Openings</h2>
+<h2 class="title">Current Openings</h2>
 
-    <div class="job">
-        <h4>Electrical Engineer – UAE</h4>
-        <p>Experience: 3+ Years</p>
-    </div>
+<div class="job">
+<h4>Electrical Engineer – UAE</h4>
+<p>Experience: 3+ Years</p>
+</div>
 
-    <div class="job">
-        <h4>Accountant – UAE</h4>
-        <p>Experience: 2+ Years</p>
-    </div>
+<div class="job">
+<h4>Accountant – UAE</h4>
+<p>Experience: 2+ Years</p>
+</div>
+
 </section>
 
 <section class="cta">
-    <h2>Hire Globally. Grow Faster.</h2>
-    <p>Partner with us to build high-performing teams across markets.</p>
-    <a href="https://forms.gle/okF6cmUNH5oLGbhs9" class="btn">Get Started</a>
+<h2>Looking to Hire or Get Hired?</h2>
+<p>Let’s connect and grow together.</p>
+<a href="https://forms.gle/hDq8JJbJjZNZnZ7E9" class="btn">Get Started</a>
 </section>
 
 <footer>
-    <p>© 2026 Sunrise Consultancy</p>
-    <p>
-        <a href="https://www.linkedin.com/company/sunrise-consultancy-0811/" style="color:white;">
-        Follow us on LinkedIn
-        </a>
-    </p>
+<p>© 2026 Sunrise Consultancy</p>
+<p>
+<a href="https://www.linkedin.com/company/sunrise-consultancy-0811/" style="color:white;">LinkedIn</a>
+</p>
 </footer>
 
 <a href="https://wa.me/919638039035" class="whatsapp">💬</a>
