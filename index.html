@@ -3,30 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sunrise Consultancy | Global Recruitment Experts</title>
+<title>Sunrise Consultancy | Premium Recruitment</title>
 
 <style>
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #f5f7fb;
-    color: #1a1a1a;
+    font-family: 'Poppins', sans-serif;
+    background: #f4f7fb;
+    color: #111;
 }
 
-/* HEADER */
+/* HEADER (GLASS EFFECT) */
 header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 60px;
-    background: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    z-index: 1000;
 }
 
-header img { height: 55px; }
+header img { height: 50px; }
 
 nav a {
-    margin-left: 20px;
+    margin-left: 25px;
     text-decoration: none;
     color: #0a2540;
     font-weight: 500;
@@ -37,7 +41,7 @@ nav a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 80px 60px;
+    padding: 140px 60px 80px;
 }
 
 .hero-text {
@@ -45,78 +49,97 @@ nav a {
 }
 
 .hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
+    font-size: 52px;
+    line-height: 1.2;
 }
 
 .hero p {
     font-size: 18px;
     color: #555;
+    margin-top: 15px;
 }
 
 .btn {
     display: inline-block;
-    background: #ff7a00;
+    background: linear-gradient(45deg,#ff7a00,#ffb347);
     color: white;
-    padding: 12px 25px;
-    margin-top: 20px;
+    padding: 14px 28px;
+    margin-top: 25px;
+    border-radius: 30px;
     text-decoration: none;
-    border-radius: 6px;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+/* HERO IMAGE */
 .hero img {
     width: 45%;
-    border-radius: 12px;
+    border-radius: 15px;
 }
 
 /* SECTION */
 section {
-    padding: 80px 60px;
+    padding: 90px 60px;
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+    font-size: 32px;
 }
 
-/* SERVICES */
+/* CARDS */
 .grid {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     flex-wrap: wrap;
 }
 
 .card {
     flex: 1;
-    min-width: 250px;
+    min-width: 260px;
     background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
 }
 
-/* HIGHLIGHT */
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* DARK SECTION */
 .highlight {
-    background: linear-gradient(to right, #0a2540, #1f4b7a);
+    background: linear-gradient(135deg,#0a2540,#1c4b82);
     color: white;
     text-align: center;
+    padding: 100px 20px;
 }
 
 /* JOBS */
 .job {
     background: white;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 8px;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.job:hover {
+    transform: scale(1.02);
 }
 
 /* CTA */
 .cta {
-    background: #ff7a00;
+    background: linear-gradient(45deg,#ff7a00,#ffb347);
     color: white;
     text-align: center;
-    padding: 60px;
+    padding: 80px;
 }
 
 /* FOOTER */
@@ -124,7 +147,7 @@ footer {
     background: #0a2540;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
 }
 
 /* WHATSAPP */
@@ -134,8 +157,9 @@ footer {
     right: 20px;
     background: #25D366;
     color: white;
-    padding: 15px;
+    padding: 16px;
     border-radius: 50%;
+    font-size: 18px;
 }
 </style>
 </head>
@@ -154,37 +178,28 @@ footer {
 
 <section class="hero">
     <div class="hero-text">
-        <h1>Hire the Right Talent Faster</h1>
-        <p>We help UAE & global companies hire skilled professionals from India efficiently.</p>
+        <h1>Elite Recruitment Solutions for Global Businesses</h1>
+        <p>We connect UAE companies with top-tier talent from India — fast, reliable, and efficient.</p>
 
-        <a href="https://forms.gle/dCzdXKedy3QVZEgT9" class="btn">Hire Talent</a>
+        <a href="https://forms.gle/7E1Pq2WBVM2MW9YK7" class="btn">Hire Talent</a>
         <a href="https://www.linkedin.com/company/sunrise-consultancy-0811/" class="btn">LinkedIn</a>
     </div>
 
-    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
+    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
 </section>
 
 <section id="services">
-    <h2 class="section-title">Our Services</h2>
+    <h2 class="section-title">Our Expertise</h2>
     <div class="grid">
-        <div class="card">
-            <h3>Talent Acquisition</h3>
-            <p>End-to-end hiring solutions</p>
-        </div>
-        <div class="card">
-            <h3>Executive Hiring</h3>
-            <p>Leadership hiring</p>
-        </div>
-        <div class="card">
-            <h3>International Hiring</h3>
-            <p>India to UAE recruitment</p>
-        </div>
+        <div class="card"><h3>Talent Acquisition</h3><p>Complete recruitment solutions</p></div>
+        <div class="card"><h3>Executive Hiring</h3><p>Leadership & senior roles</p></div>
+        <div class="card"><h3>International Hiring</h3><p>India to UAE recruitment</p></div>
     </div>
 </section>
 
 <section class="highlight">
-    <h2>Hire Skilled Talent from India for UAE</h2>
-    <p>Access job-ready professionals at cost-effective hiring.</p>
+    <h2>Hire from India. Scale in UAE.</h2>
+    <p>Access skilled professionals at optimized hiring costs.</p>
 </section>
 
 <section id="jobs">
@@ -192,18 +207,18 @@ footer {
 
     <div class="job">
         <h4>Electrical Engineer – UAE</h4>
-        <p>Experience: 3+ Years</p>
+        <p>3+ Years Experience</p>
     </div>
 
     <div class="job">
         <h4>Accountant – UAE</h4>
-        <p>Experience: 2+ Years</p>
+        <p>2+ Years Experience</p>
     </div>
 </section>
 
 <section class="cta">
-    <h2>Looking to Hire or Apply?</h2>
-    <a href="https://forms.gle/dCzdXKedy3QVZEgT9" class="btn">Submit Details</a>
+    <h2>Let’s Build Your Team</h2>
+    <a href="https://forms.gle/7E1Pq2WBVM2MW9YK7" class="btn">Get Started</a>
 </section>
 
 <footer>
