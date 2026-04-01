@@ -8,27 +8,31 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-html {
-scroll-behavior:smooth;
-}
 
 body {
 margin:0;
 font-family:'Poppins',sans-serif;
-background:#f4f7fb;
+background:linear-gradient(135deg,#eef3ff,#f9fbff);
 color:#111;
 overflow-x:hidden;
+}
+
+/* GLASS EFFECT */
+.glass {
+background:rgba(255,255,255,0.6);
+backdrop-filter:blur(15px);
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
 /* HEADER */
 header {
 position:fixed;
-top:0;
 width:100%;
-background:rgba(255,255,255,0.8);
-backdrop-filter:blur(12px);
+top:0;
+background:rgba(255,255,255,0.6);
+backdrop-filter:blur(15px);
 z-index:1000;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 
 .header-container {
@@ -40,179 +44,83 @@ align-items:center;
 padding:15px 20px;
 }
 
-header img {height:45px;}
-
-nav {
-display:flex;
-gap:25px;
-}
-
 nav a {
+margin-left:20px;
 text-decoration:none;
 color:#0a2540;
-font-weight:500;
 position:relative;
 }
 
-nav a::after {
-content:'';
-position:absolute;
-width:0;
-height:2px;
-background:#ff7a00;
-left:0;
-bottom:-5px;
-transition:0.3s;
-}
-
-nav a:hover::after {
-width:100%;
+nav a:hover {
+color:#ff7a00;
 }
 
 /* HERO */
 .hero {
 display:flex;
-align-items:center;
 justify-content:space-between;
-padding:150px 40px 100px;
+align-items:center;
+padding:160px 40px 100px;
 flex-wrap:wrap;
 }
 
-.hero-text {max-width:500px;}
+.hero-text {
+max-width:500px;
+}
 
 .hero h1 {
-font-size:44px;
-line-height:1.2;
+font-size:46px;
+background:linear-gradient(45deg,#0a2540,#1c4b82);
+-webkit-background-clip:text;
+color:transparent;
 }
 
 .hero p {
 color:#555;
-margin-top:15px;
-font-size:18px;
 }
 
 /* BUTTON */
 .btn {
 background:linear-gradient(45deg,#ff7a00,#ffb347);
-color:white;
-padding:14px 28px;
+padding:14px 30px;
 border-radius:30px;
+color:white;
 text-decoration:none;
 display:inline-block;
 margin-top:20px;
-margin-right:10px;
 transition:0.3s;
 }
 
 .btn:hover {
 transform:translateY(-5px);
-box-shadow:0 10px 20px rgba(0,0,0,0.15);
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
 }
 
-.linkedin-btn {background:#0077b5;}
+/* CARDS */
+.card {
+padding:25px;
+border-radius:15px;
+margin:10px;
+flex:1;
+min-width:250px;
+}
+
+.grid {
+display:flex;
+flex-wrap:wrap;
+}
 
 /* SECTION */
 section {
-padding:90px 30px;
-opacity:0;
-transform:translateY(40px);
-transition:0.8s;
+padding:90px 20px;
 }
 
-section.show {
-opacity:1;
-transform:translateY(0);
-}
-
-.title {
-text-align:center;
-margin-bottom:40px;
-font-size:32px;
-}
-
-/* GRID */
-.grid {
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-}
-
-.card {
-flex:1;
-min-width:250px;
-background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-transition:0.3s;
-}
-
-.card:hover {
-transform:translateY(-10px);
-box-shadow:0 15px 40px rgba(0,0,0,0.12);
-}
-
-/* HIGHLIGHT */
-.highlight {
-background:linear-gradient(135deg,#0a2540,#1c4b82);
-color:white;
-text-align:center;
-padding:100px 20px;
-}
-
-/* JOB */
-.job {
-background:white;
-padding:20px;
-margin:10px 0;
-border-radius:10px;
-transition:0.3s;
-}
-
-.job:hover {
-transform:scale(1.02);
-}
-
-/* FORM */
-.form-box {
-max-width:900px;
-margin:auto;
-border-radius:15px;
-overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
-}
-
-/* VISION MISSION */
-.vm-section {
-background:#f4f7fb;
-}
-
-.vm-container {
-max-width:1100px;
-margin:auto;
-display:flex;
-gap:30px;
-flex-wrap:wrap;
-}
-
+/* VISION */
 .vm-card {
-flex:1;
-min-width:300px;
-background:white;
 padding:40px;
 border-radius:15px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-transition:0.3s;
-}
-
-.vm-card:hover {
-transform:translateY(-10px);
-}
-
-.vm-icon {
-font-size:28px;
-margin-bottom:10px;
-color:#ff7a00;
+flex:1;
+min-width:300px;
 }
 
 /* FOOTER */
@@ -222,44 +130,14 @@ color:white;
 padding:50px 20px;
 }
 
-.footer-container {
-max-width:1100px;
-margin:auto;
-display:flex;
-flex-wrap:wrap;
-justify-content:space-between;
-gap:30px;
-}
-
 .footer-brand {
 display:flex;
 align-items:center;
 gap:10px;
-margin-bottom:10px;
 }
 
 .footer-brand img {
-height:45px;
-}
-
-footer p, footer a {
-color:#ccc;
-text-decoration:none;
-font-size:14px;
-}
-
-.footer-bottom {
-text-align:center;
-margin-top:30px;
-border-top:1px solid #444;
-padding-top:20px;
-}
-
-.linkedin-icon {
-display:flex;
-align-items:center;
-gap:8px;
-margin-top:10px;
+height:40px;
 }
 
 .linkedin-icon img {
@@ -274,7 +152,6 @@ right:20px;
 width:60px;
 }
 
-.whatsapp img {width:100%;}
 </style>
 </head>
 
@@ -282,135 +159,87 @@ width:60px;
 
 <header>
 <div class="header-container">
-<img src="logo.png">
+<img src="logo.png" height="45">
 
 <nav>
 <a href="#">Home</a>
 <a href="#services">Services</a>
 <a href="#jobs">Jobs</a>
-<a href="#contact">Contact</a>
 </nav>
 </div>
 </header>
 
-<section class="hero show">
+<section class="hero">
 <div class="hero-text">
-<h1>Global Recruitment Solutions for Growing Businesses</h1>
-<p>Helping companies hire skilled professionals across India, UAE, UK, USA and global markets.</p>
+<h1>Premium Recruitment Solutions</h1>
+<p>Connecting talent globally with smart hiring solutions.</p>
 
-<a href="https://forms.gle/i6zmoPvZLHGTANzr7" class="btn">Hire Talent</a>
-<a href="https://forms.gle/i6zmoPvZLHGTANzr7" class="btn">Submit CV</a>
-<a href="https://www.linkedin.com/company/sunrise-consultancy-0811/" class="btn linkedin-btn" target="_blank">LinkedIn</a>
+<a href="https://forms.gle/i6zmoPvZLHGTANzr7" class="btn">Get Started</a>
 </div>
 
-<img src="https://images.unsplash.com/photo-1552664730-d307ca884978" width="45%">
+<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" width="45%">
 </section>
 
 <section id="services">
-<h2 class="title">Our Services</h2>
+<h2>Our Services</h2>
+
 <div class="grid">
-<div class="card"><h3>Global Recruitment</h3><p>End-to-end hiring solutions worldwide.</p></div>
-<div class="card"><h3>International Hiring</h3><p>UAE, UK, USA & global markets.</p></div>
-<div class="card"><h3>Executive Search</h3><p>Leadership hiring solutions.</p></div>
-<div class="card"><h3>Corporate Training</h3><p>Job-ready skill development.</p></div>
-<div class="card"><h3>Placement Services</h3><p>Connecting talent with opportunity.</p></div>
-<div class="card"><h3>HR Solutions</h3><p>Complete manpower solutions.</p></div>
+
+<div class="card glass">Global Recruitment</div>
+<div class="card glass">International Hiring</div>
+<div class="card glass">Executive Search</div>
+<div class="card glass">HR Solutions</div>
+
 </div>
-</section>
-
-<section class="highlight">
-<h2>Connecting Talent Across Borders</h2>
-<p>Access skilled professionals globally and grow your business faster.</p>
-</section>
-
-<section id="jobs">
-<h2 class="title">Current Openings</h2>
-<div class="job"><h4>Electrical Engineer – UAE</h4><p>3+ Years Experience</p></div>
-<div class="job"><h4>Accountant – UAE</h4><p>2+ Years Experience</p></div>
 </section>
 
 <section>
-<h2 class="title">Apply or Hire Now</h2>
-<div class="form-box">
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdC78-KVHKo6jrD704b5clwaoNSMl7gMqixYjnPukhWjF39sQ/viewform?embedded=true" width="100%" height="900"></iframe>
+<h2>Apply Now</h2>
+
+<div class="glass">
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdC78-KVHKo6jrD704b5clwaoNSMl7gMqixYjnPukhWjF39sQ/viewform?embedded=true" width="100%" height="800"></iframe>
 </div>
+
 </section>
 
-<section class="vm-section">
-<h2 class="title">Our Vision & Mission</h2>
+<section>
+<h2>Vision & Mission</h2>
 
-<div class="vm-container">
-<div class="vm-card">
-<div class="vm-icon">👁️</div>
-<h3>Our Vision</h3>
-<p>To become a reliable global recruitment partner known for delivering the right talent solutions and building long-term value for businesses and professionals.</p>
+<div class="grid">
+
+<div class="vm-card glass">
+<h3>Vision</h3>
+<p>To be a trusted global recruitment partner delivering quality talent solutions.</p>
 </div>
 
-<div class="vm-card">
-<div class="vm-icon">🎯</div>
-<h3>Our Mission</h3>
-<p>To support organizations in hiring skilled talent efficiently while helping individuals find meaningful career opportunities through a structured, transparent, and quality-driven approach.</p>
+<div class="vm-card glass">
+<h3>Mission</h3>
+<p>To connect businesses with the right talent through efficient and transparent hiring.</p>
 </div>
+
 </div>
+
 </section>
 
 <footer>
 
-<div class="footer-container">
-
-<div>
 <div class="footer-brand">
 <img src="logo.png">
 <h3>Sunrise Consultancy</h3>
 </div>
-<p>Global recruitment solutions connecting talent with opportunity across UAE, UK, USA and beyond.</p>
-</div>
 
-<div>
-<h4>Quick Links</h4>
-<p><a href="#">Home</a></p>
-<p><a href="#services">Services</a></p>
-<p><a href="#jobs">Jobs</a></p>
-<p><a href="#contact">Contact</a></p>
-</div>
-
-<div>
-<h4>Contact</h4>
-<p>📞 +91 9638039035</p>
-<p>📧 sunriseconsultancy.hr@gmail.com</p>
+<p>Global recruitment solutions across UAE, UK, USA</p>
 
 <div class="linkedin-icon">
 <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png">
-<a href="https://www.linkedin.com/company/sunrise-consultancy-0811/" target="_blank">LinkedIn</a>
-</div>
-
-</div>
-
-</div>
-
-<div class="footer-bottom">
-<p>© 2026 Sunrise Consultancy</p>
+<a href="https://www.linkedin.com/company/sunrise-consultancy-0811/" style="color:white;">LinkedIn</a>
 </div>
 
 </footer>
 
-<a href="https://wa.me/919638039035" class="whatsapp" target="_blank">
+<a href="https://wa.me/919638039035" class="whatsapp">
 <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
 </a>
-
-<script>
-const sections = document.querySelectorAll("section");
-
-window.addEventListener("scroll", () => {
-sections.forEach(sec => {
-const top = window.scrollY;
-const offset = sec.offsetTop - 400;
-if(top > offset){
-sec.classList.add("show");
-}
-});
-});
-</script>
 
 </body>
 </html>
